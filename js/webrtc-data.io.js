@@ -62,11 +62,7 @@ function sanitize(msg) {
 												return sanitize_replace[c]; });
 }
 
-window.turnserversDotComAPI.iceServers(function(data) {
-	start(data)
-});
-
-function start(iceServers) {
+(function() {
 
   var rtc;
   if ('undefined' === typeof module) {
@@ -106,8 +102,7 @@ function start(iceServers) {
   };
 
   // Holds the STUN/ICE server to use for PeerConnections.
-  //rtc.SERVER = {iceServers:[{url:"stun:stun.l.google.com:19302"}]};
-  rtc.SERVER = iceServers;
+  rtc.SERVER = {iceServers:[{url:"stun:stun.l.google.com:19302"}]};
 
   // Reference to the lone PeerConnection instance.
   rtc.peerConnections = {};
@@ -537,4 +532,4 @@ function start(iceServers) {
     rtc.sendOffers();
   });
 
-}
+}).call(this);
