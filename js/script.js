@@ -29,7 +29,7 @@ var ROOM_TITLE = "WebRTC Copy - Room "; /* constant - room title bar string */
 var username = "";
 
 /* server name */
-var rtccopy_server = "wss:rtccopy.com:8001"; /* 8001 for secure, 8000 for insecure */
+var rtccopy_server = "ws:sparber.net:62249"; /* 8001 for secure, 8000 for insecure */
 
 /* your crpyto information */
 var encryption_type = "";
