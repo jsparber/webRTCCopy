@@ -103,7 +103,12 @@ function sanitize(msg) {
 
   // Holds the STUN/ICE server to use for PeerConnections.
   //rtc.SERVER = {iceServers:[{url:"stun:stun.l.google.com:19302"}]};
-  rtc.SERVER = {iceServers:[{url:"stun:numb.viagenie.ca:3478"}]};
+  rtc.SERVER = {iceServers:[{url:"stun:numb.viagenie.ca:3478"}, {
+	url: 'turn:numb.viagenie.ca',
+	credential: 'DNGcRHNjTvmEaEcy5yoB',
+	username: ' awsdatabase@gmail.com'
+},
+]};
 
   // Reference to the lone PeerConnection instance.
   rtc.peerConnections = {};
