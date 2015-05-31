@@ -107,7 +107,7 @@ function sanitize(msg) {
 	url: 'turn:numb.viagenie.ca',
 	credential: 'DNGcRHNjTvmEaEcy5yoB',
 	username: ' awsdatabase@gmail.com'
-},
+}
 ]};
 
   // Reference to the lone PeerConnection instance.
